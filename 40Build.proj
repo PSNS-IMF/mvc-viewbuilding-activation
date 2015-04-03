@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace Condition=" '$(RootNamespace)' == '' ">Psns.Common.Mvc.ViewBuilding.Activation</RootNamespace>
-    <AssemblyName>ClassLibrary40</AssemblyName>
+    <AssemblyName>$(RootNamespace)</AssemblyName>
     <OutDir>$(OutDir)net40\</OutDir>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
