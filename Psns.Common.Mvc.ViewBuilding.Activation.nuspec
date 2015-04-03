@@ -30,8 +30,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="Psns.Common.Mvc.ViewBuilding.Activation\nuget\content\**\*.*" target="content" />
-    <file src="Psns.Common.Mvc.ViewBuilding.Activation\bin\$configuration$\net40\Psns.Common.Mvc.ViewBuilding.Activation.*" target="lib\net40\" />
-    <file src="Psns.Common.Mvc.ViewBuilding.Activation\bin\$configuration$\Psns.Common.Mvc.ViewBuilding.Activation.*" target="lib\net45\" />
+    <file src="src\Psns.Common.Mvc.ViewBuilding.Activation\nuget\content\**\*.*" target="content" />
+    <file src="src\Psns.Common.Mvc.ViewBuilding.Activation\bin\$configuration$\net40\Psns.Common.Mvc.ViewBuilding.Activation.*" target="lib\net40\" />
+    <file src="src\Psns.Common.Mvc.ViewBuilding.Activation\bin\$configuration$\Psns.Common.Mvc.ViewBuilding.Activation.*" target="lib\net45\" />
   </files>
 </package>
