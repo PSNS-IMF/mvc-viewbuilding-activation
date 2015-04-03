@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <SolutionName>ViewBuildingActivation</SolutionName>
+    <ProjectName>Psns.Common.Mvc.ViewBuilding.Activation</ProjectName>
+    <OutDir>src\$(ProjectName)\bin\$(Configuration)\</OutDir>
+    <AssemblyPath>$(OutDir)$(ProjectName).dll</AssemblyPath>
+    <XmlDocPath>$(OutDir)$(ProjectName).xml</XmlDocPath>
+    <AssemblyPath40>$(OutDir)net40\$(ProjectName).dll</AssemblyPath40>
+    <XmlDocPath40>$(OutDir)net40\$(ProjectName).xml</XmlDocPath40>
+  </PropertyGroup>
+
+  <Target Name="Build" DependsOnTargets="Compile;Deploy" />
+
+  <Target Name="Compile">
+    <MSBuild Projects="$(SolutionName).sln" />
+    <MSBuild Projects="40Build.proj" />
+  </Target>
+
+  <Target Name="Deploy">
+    <GetAssemblyIdentity AssemblyFiles="$(AssemblyPath)">
+      <Output TaskParameter="Assemblies" ItemName="AssemblyInfo" />
+    </GetAssemblyIdentity>
+    <Copy DestinationFolder="Build\lib\net40" SourceFiles="$(AssemblyPath40);$(XmlDocPath40)" />
+    <Copy DestinationFolder="Build\lib\net45" SourceFiles="$(AssemblyPath);$(XmlDocPath)" />
+    <Exec Command="$(Nuget) pack $(ProjectName).nuspec -NoPackageAnalysis -verbosity detailed -p Configuration=$(Configuration) -Version %(AssemblyInfo.Version) -o Build" />
+  </Target>
+</Project>

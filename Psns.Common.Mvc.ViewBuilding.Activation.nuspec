@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Psns.Common.Mvc.ViewBuilding.Activation</id>
+    <title>Automated ViewBuilding Activation</title>
+    <authors>PSNS</authors>
+    <owners>109.14</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Handles activation and registration of view building components at Mvc App start up</description>
+    <projectUrl>https://github.com/PSNS-IMF/mvc-viewbuilding-activation</projectUrl>
+    <licenseUrl>https://github.com/PSNS-IMF/mvc-viewbuilding-activation/blob/master/LICENSE.md</licenseUrl>
+    <releaseNotes>
+      ## 1.0.0.0
+      ### Features
+      * Initial release
+    </releaseNotes>
+    <version>$version$</version>
+    <tags>PSNS mvc4 mvc5 asp.net mvc AspNetMvc model automation crud views viewbuilding</tags>
+    <dependencies>
+      <group targetFramework="net40">
+        <dependency id="Psns.Common.Mvc.ViewBuilding" version="4.3.0.0" />
+        <dependency id="Microsoft.AspNet.WebApi.WebHost" version="4.0.30506.0" />
+        <dependency id="WebActivatorEx" version="2.0.6" />
+      </group>
+      <group targetFramework="net45">
+        <dependency id="Psns.Common.Mvc.ViewBuilding" version="4.3.0.0" />
+        <dependency id="Microsoft.AspNet.WebApi.WebHost" version="5.2.3" />
+        <dependency id="WebActivatorEx" version="2.0.6" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Psns.Common.Mvc.ViewBuilding.Activation\nuget\content\**\*.*" target="content" />
+    <file src="Psns.Common.Mvc.ViewBuilding.Activation\bin\$configuration$\net40\Psns.Common.Mvc.ViewBuilding.Activation.*" target="lib\net40\" />
+    <file src="Psns.Common.Mvc.ViewBuilding.Activation\bin\$configuration$\Psns.Common.Mvc.ViewBuilding.Activation.*" target="lib\net45\" />
+  </files>
+</package>
