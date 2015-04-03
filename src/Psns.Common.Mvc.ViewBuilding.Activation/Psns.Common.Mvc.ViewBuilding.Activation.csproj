@@ -107,7 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewBuildingActivator.cs" />
+    <Content Include="ViewBuildingActivator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="nuget\content\App_Start\ViewBuildingActivator.cs.pp" />

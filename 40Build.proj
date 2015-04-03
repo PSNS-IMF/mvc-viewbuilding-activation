@@ -109,10 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\$(RootNamespace)\Properties\AssemblyInfo.cs" />
-    <Compile Include="src\$(RootNamespace)\ViewBuildingActivator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Content Include="src\$(RootNamespace)\nuget\content\App_Start\ViewBuildingActivator.cs.pp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
